@@ -6,24 +6,24 @@ using namespace std;
 int main()
 {
 	int count;
-	string parrafo;
-	getline(cin, parrafo);
+	string phrase;
 	char c = '"';
-	string reemplazo = "``";
-	string reemplazo2 = "''";
+	string replacement1 = "``";
+	string replacement2 = "''";
 	count = 0;
-	for (int i = 0; i < (int)parrafo.length(); ++i) {
-		if (parrafo[i] == c) {
+	while (getline(cin, phrase)){
+		for (int i = 0; i < (int)phrase.length(); ++i) {
+			if (phrase[i] == c) {
 			    count++;
 				if(count % 2 == 0){
-				parrafo.replace(i, 1, reemplazo2);
+					phrase.replace(i, 1, replacement2);
 				}
 				else {
-				parrafo.replace(i, 1, reemplazo);
+					phrase.replace(i, 1, replacement1);
 				}
+			}
 		}
+		cout << phrase << endl;
 	}
-	cout << parrafo << endl;
-	system("pause");
-    return 0;
+	return 0;
 }
