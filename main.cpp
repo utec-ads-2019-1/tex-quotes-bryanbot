@@ -24,5 +24,5 @@ int main()
 		}
 	}
 	cout << parrafo << endl;
-	system("pause");
+    return 0;
 }
